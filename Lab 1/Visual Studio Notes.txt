@@ -1,0 +1,25 @@
+Joseph Meriam
+9/8/15
+ECE 1305 Lab 1
+——————————————————————————
+
+My files are stored under the visual studio 2015 folder in my documents
+
+I created one solution housing each of the four sub-projects
+
+The folders created are:
+	Babylonian
+	Gravity
+	ProgressiveTaxes
+	Divison
+	Debug
+
+The immediate files present are:
+	solution file
+	vc++ project (filters) file
+	
+	
+
+Each folder contains its own source file, vc++ project file, vc++ project filters file and debug folder
+
+Within the debug folder lies the application, the log, dependancy file, debug database, obj file, and tlog folder
