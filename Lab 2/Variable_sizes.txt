@@ -1,0 +1,66 @@
+
+Joseph Meriam
+ECE 1305 Lab 2
+9/18/15
+
+Sizes in bytes:
+	1 Byte:
+		Bool
+		Char
+		Unsigned Char
+	2 Bytes:
+		Short
+		Unsigned Short
+	4 Bytes:
+		Int
+		Unsigned Int
+		Float
+	8 Bytes:
+		Long
+		Long Long
+		Unsigned Long
+		Double
+	16 Bytes:
+		Long Double
+
+Largest and Smallest Values:
+	Int:
+		11111111 which is equal to 255
+		Unsigned:
+			2147483647 or (2^31)-1
+		Signed:
+			Max: 2147483647
+			Min: -2147483647
+	Bool: 
+		It's either a 1 or 0
+	Char:
+		Signed:
+			Min: -127(-2^7+1)
+			Max: 127(2^7+1)
+		Unsigned:
+			255(2^8-1)
+	Short Int:
+		Signed:
+			Min: -32767(-2^15+1)
+			Max: 32767(2^15+1)
+		Unsigned:
+			65535(2^16-1)
+	Long Long Int:
+		Signed:
+			Min: -9223372036854775807(-2^63+1)
+			Max: 9223372036854775807(2^63+1)
+		Unsigned: 18446744073709551615(2^64-1) 
+	Floating Point Numbers:
+		Single Precision(32 bit):
+			± 2^126 to (2-2^23)×2^127	
+		Double Precision(64 bit):
+			± 2^-1022 to (2-2^52)×2^1023
+
+
+Part 3:
+	acos(-1) equates to PI because:
+		acos(number) = theta is equal to:
+			cos(theta) = number
+			cos(theta) = -1
+			cos(180 degrees) = -1
+			180 degrees = PI
