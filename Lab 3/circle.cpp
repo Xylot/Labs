@@ -1,3 +1,11 @@
+/*
+
+Joseph Meriam
+ECE 1305 Lab 3 Extra Credit
+9/26/15
+Creates a circle PGM file complete with shading the ability to draw a box
+
+*/
 #include <iostream>
 #include <fstream>
 #include <string>
