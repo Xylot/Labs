@@ -1,78 +1,54 @@
+/*
+
+Joseph Meriam
+ECE 1305 Lab 3
+9/26/15
+Prints a set of user defined numbers based on a user defined amount of rows
+
+*/
+
 #include <iostream>
-#include <fstream>
-#include <cmath>
-#include <string>
-#include <sstream>
 
 using namespace std;
 
-int main() {
-
-	// Initialize variables
-	string line, rheight, rlength, rhypotenuse, x, fileName;
-	double area, height, length, hypotenuse;
-	
-	// Prompts user for their filename
-	cout << "What is the name of the file that you wish to use? (No extension) ";
-	cin >> fileName;
-	
-	// Adds the .txt extension to the file
-	fileName += ".txt";
-
-	// Loads the file
-	ifstream triangle(fileName.c_str());
-
-	// Loads line 1
-	getline(triangle, line);
-	istringstream getHeight(line);
-
-	// Gets the characters before the space
-	getHeight >> x;
-
-	// Gets the height
-	getHeight >> rheight;
-
-	// Turns the height into a double for calculations
-	height = stod(rheight);
-
-	// Load line 2
-	getline(triangle, line);
-	istringstream getLength(line);
-
-	// Gets the characters before the space
-	getLength >> x;
-
-	// Gets the length
-	getLength >> rlength;
-
-	// Turns length into a double for calculation
-	length = stod(rlength);
-
-	// Loads line 3
-	getline(triangle, line);
-	istringstream getHypotenuse(line);
-
-	// Gets the characters before the space
-	getHypotenuse >> x;
-
-	// Gets the hypotenuse
-	getHypotenuse >> rhypotenuse;
-
-	// Turns the hypotenuse into a double
-	hypotenuse = stod(rhypotenuse);
-	
-	// Calculates area
-	area = (length*height) / 2;
-
-	// Prints triangle dimensions
-	cout << "Triangle dimensions \n" << endl;
-	cout << "Height: " << height << endl;
-	cout << "Length: " << length << endl;	
-	cout << "Hypotenuse: " << hypotenuse << "\n" << endl;
-
-	// Prints area
-	cout << "The area of the triangle is: " << area << "\n" << endl;
-
-	// Closes file
-	triangle.close();
+int main(void)
+{
+    
+    // Initialize variables
+    int nums, rows;
+    
+    // Prompts user for the amount of numbers to display
+    cout << "How many numbers do you want to output? ";
+    cin >> nums;
+    
+    // Prompts the user for the amount of rows to display
+    cout << "How many rows do you want to output? ";
+    cin >> rows;
+    
+    // Formatting
+    cout << endl;
+    
+    // Increments i until the amount of rows
+    for (int i = 0; i < rows; i++) {
+        
+        // Formatting for the numbers 1-9
+        if (i < 9) {
+            cout << " ";
+        }
+        
+        // Increments j by the number of rows  until the numbers to be displayed has been reached
+        for (int j = 1; j < nums; j += rows) {
+            
+            
+            // Only prints the next integer if the sum of i and j are less than the number amount
+            if (i + j < nums + 1) {
+                cout << i + j << "  ";
+            }
+            
+        }
+        
+        // Formatting
+        cout << endl;
+        
+    }
 }
