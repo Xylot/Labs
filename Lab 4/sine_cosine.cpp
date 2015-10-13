@@ -1,3 +1,11 @@
+/*
+
+Joseph Meriam
+ECE 1305 Lab 4
+10/2/15
+Calculates the values of cos, sin, and .37cos + .92sin for values of x in steps of 0.1
+
+*/
 #include <iostream>
 #include <fstream>
 #include <cmath>
