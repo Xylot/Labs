@@ -1,0 +1,22 @@
+Joseph Meriam, Syed Ahmed, Bin L., Trevor Calvert
+pointers_questions.txt 
+Questions within the initial code itself
+1) "What's the difference between (p)++ and (p++)"
+The relevant value here is first being identified and then incremented by one. This is why we have "10, 11, 12, 13, 14"
+As for p*, our first value is 15, and then we increment through our initial array for the remaining values to get" 15, 20, 30, 40, 50"
+
+2) "Why is p+1 not one more than p (hint: sizeofint is 4)"
+The reason behind why the location is not just one value higher here as a number is because the next available spot to this location is a value of plus or minus four. Through the eyes of the computer, it really is the next available spot, but the number value associated here is not. 
+
+3) "How does this step through the array?"
+Basically we are recalling the location, and then moving through the array with "k" (one at a time), and then we represent the respective value in that given location. We are merely expressing the array like before but through a different method that can be considered a little more advantageous. 
+
+Questions throughout the lab
+4) "Which has higher precedence?"( how is cout << (p+i)  different from cout << p+i)
+Here we can note that the precedence falls in this particular order: Parenthesis, */& operators and then the addition sign. (Referred to the precedence chart in our textbook)
+* (p+i): We can interpret this as "p" being altered through its individual array with "I", and then outputted as the value stored in this specific spot on the computer.
+*p+i: This states that the value where we are pointing is being increased by the value of "I".
+Because parenthesis have highest precedence, it is safe to say that they are essential in our manipulations with pointers.
+
+5) Question:  How is it that the function negatePGM(...) can change the actual pixel array, even though the pointer pix is passed by value? 
+ It is pointing to the address. This means that it is changing the value of the address. Moreover, it is still a pointer, meaning we can modify the pixel array by indexing it.
