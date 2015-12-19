@@ -1,0 +1,61 @@
+Joseph Meriam
+ECE 1305 Lab 8
+12/2/15
+Partners:
+	Syed Ahmed
+
+Q0. Calculate the integer value of the first short int value, sibuf[0], which is hexadecimal 0x6874.
+
+6 * 2^16 + 8 * 2^16 + 7 * 2^16  + 4 * 2^16 = 256*104 + 116 = 26740 in decimal integer value
+
+Q1. How to calculate the value of a short int and of an int by looking at the values in hexadecimal.
+Give an example for a short int and an int.
+
+Short int - Combine two char hexadecimal values into a single short int
+			0x65 and 0x20 = 0x2065 (hexidecimal) = 8293 (decimal)
+
+Int - Combine four char hexadecimal values into a single int
+	  0x74, 0x68, 0x65 and 0x20 (reverse combined in little endian) = 0x20656874 (hexidecimal) = 543516788 (decimal)
+
+
+Q2. How the same bytes can represent such different values when read into the different data types?
+
+The bytes will be reversed from the hex values for chars when outputted in hexadecimal as short ints and ints. This is due to the processor storing the least significant bytes into memory first (Also known as little endian). The most significant bytes are outputted first because thats how we normally read them
+
+Q3. Explain in your own words why the hexadecimal values for the chars, short ints and ints aren't in
+the same order?
+
+We see the different outputs because processors store the least significant byte (little endian), instead of the most significant byte (big endian), into memory first 
+
+Q4. Take a stab at explaining to yourself why the float and double values can be so wildly varying ?
+
+	Floats - 
+		4 bytes in memory
+		Can store up to 7 digits (10e-38 to 10e38)
+		You can store some bits as exponents using the IEEE 754 format
+		First bit: Sign bit
+		Next 8 bits: Exponent
+		Next 23 bits: Fraction bits
+
+	Doubles - 
+		8 bytes in memory
+		Can store up to 8 digits (10e-308 to 10e308)
+		You can store some bits as exponents using the IEEE 754 format
+		First bit: Sign bit
+		Next 11 bits: Exponent
+		Next 52 bits: Fraction bits
+
+Q5: Comparisons between binary and ascii
+
+	Ascii - 
+		Write lasted around 18 minutes
+		Read lasted around 11 minutes
+
+	Binary - 
+		Both read and write lasted around 2 minutes
+
+	Binary is clearly the much faster method of I/O
+
+
+    
+
